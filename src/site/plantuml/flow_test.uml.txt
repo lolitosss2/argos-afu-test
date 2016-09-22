@@ -1,0 +1,15 @@
+@startuml
+!include argos_skinparam.txt
+
+participant TestService as "Test service"
+participant API as "Argos API"
+participant Netbiter as "Netbiter"
+
+TestService -> API
+API -> Netbiter
+Netbiter->TestService
+TestService->Netbiter
+Netbiter->API
+API->TestService
+
+@enduml

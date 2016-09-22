@@ -1,0 +1,18 @@
+<configuration>
+   <!-- Avoid performance hit for disabled JUL log statements -->
+   <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator"/>
+
+   <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+      <encoder>
+         <pattern>%date{ISO8601} %-5level %logger{40} - %msg%n</pattern>
+      </encoder>
+   </appender>
+
+   <logger name="se.hms" level="INFO" />
+   <logger name="org.eclipse.jetty.webapp.StandardDescriptorProcessor" level="WARN" />
+   <logger name="org.springframework" level="INFO" />
+
+   <root level="INFO">
+      <appender-ref ref="STDOUT" />
+   </root>
+</configuration>

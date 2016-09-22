@@ -1,0 +1,8 @@
+skinparam sequence {
+   ArrowColor #b72432
+   ParticipantBorderColor #BLACK
+   ParticipantBackgroundColor #315F7B
+   ParticipantFontColor #WHITE
+   ParticipantFontSize 17
+   LifeLineBackgroundColor #ec9ba4
+}
