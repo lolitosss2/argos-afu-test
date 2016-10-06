@@ -13,7 +13,7 @@ import se.hms.argos.common.server.spring.mvc.MediaTypeConstants;
 import com.codahale.metrics.Counter;
 import com.codahale.metrics.MetricRegistry;
 
-@RestController
+@RestController    ///will intercept GET request to "/" to wi
 @RequestMapping(produces = MediaTypeConstants.APPLICATION_JSON)
 public class DummyController implements InitializingBean
 {
@@ -33,6 +33,7 @@ public class DummyController implements InitializingBean
       if (metricRegistry != null)
       {
          metricRegistry.register("example.dummy", dummyCounter);
+         
       }
    }
 
