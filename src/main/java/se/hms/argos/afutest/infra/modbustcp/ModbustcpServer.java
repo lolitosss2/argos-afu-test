@@ -122,7 +122,8 @@ public class ModbustcpServer implements InitializingBean, DisposableBean
    }
    
    int i =0;
-	private void changeInputRegister() {
+	private void changeInputRegister()
+	{
         //for (int i =0; i < 30 ; i++){
        	 /// TODO: KÖr varje timme så värdet (inputregister) ändras hela tiden varje timme för alla de 3 register 
 		i++;
@@ -167,8 +168,9 @@ public class ModbustcpServer implements InitializingBean, DisposableBean
 
 	}
 	
-	private void valueValidation() {
-		System.out.println("New Check Of Argus and Modbus");
+	private void valueValidation() 
+	{
+		System.out.println("New Check Of Argus and Modbus values");
 	      String accessKey = "51F2531794288EBA64764B38D2516890";
 	     /* String systemId = "003011FAE2BA";               used to test purposes only
 	      String parameterID1 = "66261.9269.172526";
@@ -181,15 +183,17 @@ public class ModbustcpServer implements InitializingBean, DisposableBean
 		int index = 0;
 		for(String pID: parameterId){
 			int val = Integer.parseInt(account.getInputRegister(systemId,pID));
-			if(account.getName(index++).equals("test1")){
-				System.out.println("Test1 InputRegister Value == modbusinputregister "+ (val == inputRegister1.getValue()));
-			}else if(account.getName(index++).equals("test2")){
-				System.out.println("Test2 InputRegister Value == modbusinputregister "+ (val == inputRegister2.getValue()));
-			}else if(account.getName(index++).equals("test3")){
-				System.out.println("Test3 InputRegister Value == modbusinputregister "+ (val == inputRegister3.getValue()));
+			if(account.getName(index).equals("test1")){
+				System.out.println("Test1 InputRegister Value " + val +" == modbusinputregister " + inputRegister1.getValue() + (val == inputRegister1.getValue()));
+				
+			}else if(account.getName(index).equals("test2")){
+				System.out.println("Test2 InputRegister Value " + val +" == modbusinputregister " + inputRegister2.getValue() + (val == inputRegister2.getValue()));
+			}else if(account.getName(index).equals("test3")){
+				System.out.println("Test3 InputRegister Value " + val +" == modbusinputregister " + inputRegister3.getValue() + (val == inputRegister3.getValue()));
 			}else {
 				System.out.println("Something Wrong.....");
 			}
+			index++;
 			
 
 		}
