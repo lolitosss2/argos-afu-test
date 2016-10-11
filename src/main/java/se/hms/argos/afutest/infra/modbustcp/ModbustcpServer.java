@@ -171,7 +171,7 @@ public class ModbustcpServer implements InitializingBean, DisposableBean
 	private void valueValidation() 
 	{
 		System.out.println("New Check Of Argus and Modbus values");
-	      String accessKey = "51F2531794288EBA64764B38D2516890";
+	      String accessKey = "747C441E03934628AF2C13B730E4CCDD";
 	     /* String systemId = "003011FAE2BA";               used to test purposes only
 	      String parameterID1 = "66261.9269.172526";
 	      String parameterID2 = "66261.9269.173394";
